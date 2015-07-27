@@ -1,0 +1,49 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+} 
+
+.container {
+	overflow: hidden;
+}
+
+header {
+
+	.logo-header {
+		padding: 100px 0;
+		text-align: center;
+
+		h1, img {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+		}
+	}
+}
+
+$gut: 2%;
+$col: 8.2%;
+
+@mixin grid($num-cols) {
+	width: ($col * $num-cols) + ($gut * (($num-cols) - 1));
+	margin-right: $gut;
+	float: left;
+	background: white;
+}
+
+@mixin gradient($top, $bottom) {
+	background-image: -webkit-linear-gradient(top, $top, $bottom);
+	background-image: 	 -moz-linear-gradient(top, $top, $bottom);
+	background-image: 	  -ms-linear-gradient(top, $top, $bottom);
+	background-image: 	   -o-linear-gradient(top, $top, $bottom);
+	background-image: 		  linear-gradient(to bottom, $top, $bottom);
+}
+
+@mixin shadow($shadow) {
+	-webkit-box-shadow: 0 0 15px $shadow;
+	-moz-box-shadow:    0 0 15px $shadow;
+	box-shadow:         0 0 15px $shadow;
+}

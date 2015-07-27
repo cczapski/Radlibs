@@ -1,0 +1,19 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: madlib_development
+
+test:
+  <<: *default
+  database: madlib_test
+
+production:
+  <<: *default
+  database: madlib_production
+  username: madlib
+  password: <%= ENV['MADLIB_DATABASE_PASSWORD'] %>

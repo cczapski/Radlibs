@@ -1,0 +1,106 @@
+@media screen and (min-width: 700px) {
+
+// QUOTE PREVIEWS ------------------------------------------
+
+.quote-previews {
+	max-width: 1000px;
+}
+
+.fun-quote {
+	@include grid(6);
+	float: left;
+	margin-right: 0;
+	padding: 30px;
+}
+
+.original-quote {
+	@include grid(4);
+	min-height: 280px;
+	float: right;
+	margin-right: 0;
+	overflow: hidden;
+	z-index: 1;
+	background: $blue;
+	padding: 50px 50px 70px 50px;
+}
+
+
+.start {
+	background: $tsgreen;
+	max-width: 1000px;
+	margin: 0 auto;
+	clear: left;
+	float: none;
+	color: white;
+	transition: background ease 1s;
+
+	h4 {
+		color: white;
+	}
+}
+
+form input {
+
+	&:focus {
+		@include shadow($blue);
+	}
+}
+
+.create {
+	max-width: 1000px;
+	margin: 0 auto;
+	float: none;
+}
+
+.create-button {
+	background: $blue;
+	@include gradient($ltblue, $blue);
+
+	&:hover {
+		background: $pink;
+		@include gradient($pink, $ltpink);
+	}
+}
+
+.word-input .create-button {
+	background: $green;
+	@include gradient($ltgreen, $green);
+}
+
+// CREATE AGAIN/INSPIRE -----------------------------------------
+
+.inspire-background {
+	background: white;
+	clear: both;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.inspire-box {
+	padding: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 60%;
+	margin: 0 auto;
+
+	.inspire {
+		padding-bottom: 20px;
+		font-size: 20px;
+		font-size: 1.25rem;
+	}	
+}
+
+// LOGOUT -----------------------------------------
+
+.logout-box {
+	max-width: 1000px;
+	margin: 0 auto;
+
+	button {
+		margin: 20px;
+	}
+}
+
+} //end of media query
